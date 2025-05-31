@@ -5,114 +5,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KT Secure</title>
-  <script src="./tailwind.config.js" ></script>
 
- 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 
 
-<body class="bg-[#08041D] text-white font-sans overflow-x-hidden">
- <script src="./script.js"></script>
+<body  class="bg-[#08041D]  text-white font-sans overflow-x-hidden">
+ 
+
+  <!-- Nav Bar -->
 
 
-   <!-- Nav Bar -->
-
-
-  <header  class="sticky top-0 bg-[#08041D]/22 backdrop-blur-xl shadow-md z-50">
-  <nav class="border-gray-200 px-4 lg:px-6 py-4">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-      <a href="#" class="flex items-center">
-        <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="Flowbite Logo" />
-      </a>
-      <div class="flex items-center lg:order-2">
-        <a href="#" class="text-white bg-[#FF4040] rounded-full text-md px-8 py-3">Contact Us</a>
-        <button
-          id="menu-toggle"
-          type="button"
-          class="inline-flex items-center  p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="mobile-menu-2"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6 hamburger-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <svg class="hidden w-6 h-6 close-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+  <header class="navbar sticky top-0 bg-[#08041D]/22 backdrop-blur-xl shadow-md z-50">
+    <nav class="border-gray-200 px-4 lg:px-6 py-4">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <a href="#" class="flex navlogo items-center">
+          <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="Flowbite Logo" />
+        </a>
+        <div class="flex items-center lg:order-2">
+          <a href="#" class="text-white bg-[#FF4040] bt_cta rounded-full text-md px-8 py-3">Contact Us</a>
+          <button id="menu-toggle" type="button"
+            class="inline-flex items-center  p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6 hamburger-icon" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6 close-icon" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 links font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="#home"
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0  ark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#services"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+            </li>
+            <li>
+              <a href="#about"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About
+                Us</a>
+            </li>
+            <li>
+              <a href="#testimonials"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Testimonials</a>
+            </li>
+            <li>
+              <a href="#specialists"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Our
+                Specialists</a>
+            </li>
+            <li>
+              <a href="#why"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Why
+                Chose Us</a>
+            </li>
+            <li>
+              <a href="#blog"
+                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Blogs</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-        <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-          <li>
-            <a
-              href="#home"
-              class=" nav-link block py-2 pr-4 pl-3 text-white/70  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0  ark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              aria-current="page"
-            >Home</a>
-          </li>
-          <li>
-            <a
-              href="#services"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >Services</a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >About Us</a>
-          </li>
-          <li>
-            <a
-              href="#testimonials"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >Testimonials</a>
-          </li>
-          <li>
-            <a
-              href="#specialists"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >Our Specialists</a>
-          </li>
-                    <li>
-            <a
-              href="#why"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >Why Chose Us</a>
-          </li> 
-          <li>
-            <a
-              href="#blog"
-              class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >Blogs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
 
   <!-- Hero Section -->
 
-  <section id="home" class="bg-[url(./images/hero_bg.png)] bg-cover bg-center bg-no-repeat ">
+  <section id="home"   class="relative">
 
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+     <div class="absolute inset-0 home_bg w-full h-full z-0 bg-[url(./images/hero_bg.png)] bg-cover bg-center bg-no-repeat">
+  </div>
+
+    <div class=" relative z-10 hero_content  py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
       <a href="#"
         class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-7 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
         role="alert">
-        <div class=" w-fit h-fit mr-2 items-center">
+        <div id="heading" class=" w-fit h-fit mr-2 items-center">
           <div class="bg-[url(./images/service-2.svg)] items-center  w-8 h-8 bg-no-repeat bg-center bg-contain ">
           </div>
         </div>
@@ -141,8 +124,10 @@
         </a>
       </div>
       <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-        <span class="font-semibold text-gray-400 uppercase">We're Trusted by more than 1000+ companies</span>
-        <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+        <a href="">
+          <span class="font-semibold  text-gray-400 uppercase">We're Trusted by more than 1000+ companies</span>
+        </a>
+        <div class=" com_logo flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between  ">
           <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
             <svg class="h-8" viewBox="0 0 132 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -202,17 +187,42 @@
           </a>
         </div>
       </div>
+
     </div>
+
   </section>
+
+
+   <!-- Moving Text -->
+
+<section class="py-12">
+
+    <div class="overflow-hidden marque whitespace-nowrap transform -rotate-1  py-4 bg-[#FF4040]">
+    <div class="inline-block animate-marquee">
+      <span class="mx-8 text-2xl"> Secure your software</span>
+      <span class="mx-8 text-2xl"> Code Signing Experts</span>
+      <span class="mx-8 text-2xl"> Trusted by 1000+ Companies</span>
+      <span class="mx-8 text-2xl"> HSM Key Management</span>
+      <span class="mx-8 text-2xl"> Cyber Threat Detection</span>
+      <span class="mx-8 text-2xl"> Secure your software</span>
+      <span class="mx-8 text-2xl"> Code Signing Experts</span>
+      <span class="mx-8 text-2xl"> Trusted by 1000+ Companies</span>
+      <span class="mx-8 text-2xl"> HSM Key Management</span>
+      <span class="mx-8 text-2xl"> Cyber Threat Detection</span>
+    </div>
+  </div>
+
+</section>
+
 
 
   <!-- Our services -->
 
 
   <section id="services" class="py-14  ">
-    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div class="max-w-screen-xl servicess mx-auto px-4 text-gray-600 md:px-8">
       <div class="relative max-w-2xl mx-auto sm:text-center">
-        <div class="relative z-10">
+        <div class="relative service_heading z-10">
           <a href="#"
             class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
             role="alert">
@@ -235,16 +245,12 @@
 
 
       </div>
-
-
-      <!-- background Element -->
-
-
-
+      
+      
+ <!-- service list -->
 
       <div class="relative mt-12">
-        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
+        <ul class="grid gap-8 sm:grid-cols-2 service_card lg:grid-cols-3">
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
             <div class="bg-white/5 w-fit h-fit  backdrop-blur-xs  p-4 rounded-full items-center">
               <div class="bg-[url(./images/service-1.svg)] items-center  w-10 h-10 bg-no-repeat bg-center bg-contain ">
@@ -285,6 +291,10 @@
 
 
         </ul>
+
+
+   <!-- background Element -->
+
         <div class="absolute bottom-0 -left-26 w-44 h-44 blur-[200px]" style="
          background: #FF4040  ;
         ">
@@ -297,9 +307,6 @@
         </div>
       </div>
 
-
-
-
     </div>
   </section>
 
@@ -307,7 +314,7 @@
 
   <section id="about" class="py-14  ">
     <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-      <div class="relative max-w-2xl mx-auto sm:text-center">
+      <div class="relative about_heading max-w-2xl mx-auto sm:text-center">
         <div class="relative z-10">
           <a href="#"
             class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
@@ -331,7 +338,7 @@
 
       </div>
       <div class="relative mt-20">
-        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-center">
+        <ul class="grid gap-8 sm:grid-cols-2 about_card lg:grid-cols-3 items-center">
 
           <li class="space-y-10 p-1 rounded-3xl">
 
@@ -395,7 +402,7 @@
   <section id="testimonials" class="py-14  ">
     <div class="max-w-screen-xl mx-auto px-4 md:px-8">
       <div class="relative max-w-2xl mx-auto sm:text-center">
-        <div class="relative z-10">
+        <div class="relative test_heading z-10">
           <a href="#"
             class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
             role="alert">
@@ -418,7 +425,7 @@
 
       </div>
       <div class="mt-12">
-        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="grid gap-6 test_card sm:grid-cols-2 lg:grid-cols-3">
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
             <figure>
@@ -568,8 +575,8 @@
 
   <section id="specialists" class="py-14 ">
     <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-      <div class="max-w-screen-xl mx-auto px-4 gap-x-12 justify-between md:flex md:px-8 items-center ">
-        <div class="max-w-xl">
+      <div class="max-w-screen-xl  mx-auto px-4 gap-x-12 justify-between md:flex md:px-8 items-center ">
+        <div class="max-w-xl specialists_heading">
           <a href="#"
             class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-7 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
             role="alert">
@@ -585,12 +592,12 @@
           </h3>
 
         </div>
-        <div class="flex-none mt-4 md:mt-0">
+        <div class="flex-none specialists_heading mt-4 md:mt-0">
           <a href="#" class="text-white bg-primary-700 rounded-full bg-[#FF4040]  text-md px-8 py-3 ">Contect Us</a>
         </div>
       </div>
       <div class="mt-12">
-        <ul class="grid gap-x-12 sm:grid-cols-2 sm:gap-y-8  lg:grid-cols-2 lg:gap-x-0 ">
+        <ul class="grid gap-x-12 specialists_card sm:grid-cols-2 sm:gap-y-8  lg:grid-cols-2 lg:gap-x-0 ">
 
           <li class="space-y-3 py-8 lg:px-12 sm:py-0 ">
             <div class=" w-fit h-fit items-center">
@@ -730,46 +737,6 @@
       </div>
     </div>
   </section>
-
-    <!-- <section class="py-14 max-w-screen-xl mx-auto">
-    <div
-      class=" bg-[#FF4040] bg-cover bg-center bg-no-repeat relative bg-white/5  backdrop-blur-xs rounded-3xl  mx-4 px-4 py-14 bg-[#FF4040S] md:px-8 md:mx-8">
-      <div class="relative z-10 max-w-xl mx-auto sm:text-center">
-        <div class="space-y-3">
-          <a href="#"
-            class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
-            role="alert">
-            <div class=" w-fit h-fit mr-2 items-center">
-              <div class="bg-[url(./images/service-2.svg)] items-center  w-8 h-8 bg-no-repeat bg-center bg-contain ">
-              </div>
-            </div>
-            <span class="text-sm font-regular">Contact US</span>
-
-          </a>
-          <h3 class="text-3xl text-white font-bold">
-            We're here to help — reach out anytime
-          </h3>
-          <p class="text-blue-100 leading-relaxed">
-            Whether you have a question, need support, or want to learn more, our team is just a message away.
-          </p>
-        </div>
-        <div class="mt-6">
-          <form
-            class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-x-4 sm:space-y-0 sm:max-w-md sm:mx-auto">
-            <input type="email" placeholder="Enter your email"
-              class="text-white placeholder-white/80 rounded-full backdrop-blur-xs px-6 py-3 bg-white/10 w-full outline-none sm:w-auto" />
-            <button
-              class="bg-white text-[#FF4040] font-semibold text-lg sm:text-base px-6 py-3 rounded-full shadow-lg w-full sm:w-auto">
-              Subscribe Now
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="absolute inset-0 w-full h-full">
-        
-      </div>
-    </div>
-  </section> -->
 
   <!-- Blog section -->
 
@@ -952,7 +919,7 @@
 
       <!-- Logo + Description -->
       <div>
-         <a href="#" class="flex items-center">
+        <a href="#" class="flex items-center">
           <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="Flowbite Logo" />
         </a>
         <p class="text-sm text-gray-400 mt-4">
@@ -1018,64 +985,39 @@
 
 
 
-  <script>
-  document.getElementById('menu-toggle').addEventListener('click', function () {
-    const menu = document.getElementById('mobile-menu-2');
-    const hamburgerIcon = this.querySelector('.hamburger-icon');
-    const closeIcon = this.querySelector('.close-icon');
 
-    menu.classList.toggle('hidden');
-    hamburgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-    this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-  });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-  document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  // Highlight active link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active-link');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active-link');
-      }
-    });
-  });
-});
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+<script src="./js/revel_animation.js"></script>
+  <script src="./js/course_animation.js"></script>
+  <script src="./js/main.js"></script>
 
 
-
-
-
-
-
-
-
-</script>
-
-<style>
+  <style>
     html {
       scroll-behavior: smooth;
     }
+
     .active-link {
-      color: white; /* Matches your theme's red color */
+      color: white;
+      /* Matches your theme's red color */
       font-weight: bold;
     }
 
-</style>
+    @keyframes marquee {
+      100% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .animate-marquee {
+      animation: marquee 100s linear infinite;
+    }
+
+  </style>
 
 
 
