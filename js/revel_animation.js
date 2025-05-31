@@ -199,13 +199,21 @@ tl2.from(".specialists_card li", {
 
 
 
-
-
+if (window.innerWidth >= 768) {
+ 
 hero_animation();
 service_animation();
 about_animation();
 testimonials_animation();
 specialists_animation();
+
+
+}
+
+
+
+
+
 
 
 
