@@ -366,7 +366,7 @@ var tl2 = gsap.timeline({
         scroller: "Body",
        // markers: true,
         start: "top 80%",   
-       // once: true,   
+        once: true,   
         scrub: 2,
         end: "=+100",
     }
@@ -381,26 +381,6 @@ tl2.from(".footer_main", {
     opacity: 0,
     duration: 0.2,   
     //scale: 0.4,
-
-})
-
-tl2.from(".contact_headin a,.contact_headin h3,.contact_headin p", {
-    y: -20,
-    opacity: 0,
-    duration: 0.2,
-    stagger: 0.1,
-    scale: 0.4,
-
-})
-
-
-
-tl2.from(".footer_links div", {
-    y: -20,
-    opacity: 0,
-    duration: 0.2,
-    stagger: 0.1,
-  
 
 })
 
