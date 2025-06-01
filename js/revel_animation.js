@@ -8,6 +8,12 @@ function hero_animation() {
     
 var tl = gsap.timeline({
 
+    scrollTrigger: {
+        trigger: ".home_bg",   
+        scroller: "Body",
+        once: true,
+    }
+
 });
 
 tl.from(".home_bg", {
@@ -53,6 +59,7 @@ var tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: "#services",
         scroller: "Body",
+        once: true,
        // markers: true,
         start: "top 80%",      
         scrub: 2,
@@ -92,6 +99,7 @@ var tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: "#about",
         scroller: "Body",
+        once: true,
        // markers: true,
         start: "top 80%",      
         scrub: 2,
@@ -131,6 +139,7 @@ var tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: "#testimonials",
         scroller: "Body",
+        once: true,
        // markers: true,
         start: "top 80%",      
         scrub: 2,
@@ -170,6 +179,7 @@ var tl2 = gsap.timeline({
         trigger: "#specialists",
         scroller: "Body",
        // markers: true,
+       once: true,
         start: "top 80%",      
         scrub: 2,
         end: "top 0",
@@ -197,7 +207,212 @@ tl2.from(".specialists_card li", {
 
 }
 
+//why_choose_us_animation();
 
+function why_choose_us_animation() {
+
+
+var tl2 = gsap.timeline({
+
+    scrollTrigger: {
+        trigger: "#why",
+        scroller: "Body",
+       // markers: true,
+       once: true,
+        start: "top 80%",      
+        scrub: 2,
+        end: "top 0",
+    }
+
+});
+
+tl2.from(".why_main", {
+    
+    hight : 0,
+    y: -20,
+    opacity: 0,
+    duration: 0.2,   
+    scale: 0.4,
+
+})
+
+tl2.from(".why_heading a,.why_heading h3,.why_heading p", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+
+
+tl2.from(".why_card li", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+}
+
+
+//blog_animation();
+
+function blog_animation() {
+
+
+var tl2 = gsap.timeline({
+
+    scrollTrigger: {
+        trigger: "#blog",
+        scroller: "Body",
+       // markers: true,
+        start: "top 80%",   
+        once: true,   
+        scrub: 2,
+        end: "top 0",
+    }
+
+});
+
+
+tl2.from(".blog_heading a,.blog_heading h3,.blog_heading p", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+
+
+tl2.from(".blog_card li", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+}
+
+
+//contact_animation();
+
+function contact_animation() {
+
+
+var tl2 = gsap.timeline({
+
+    scrollTrigger: {
+        trigger: "#contact",
+        scroller: "Body",
+       // markers: true,
+        start: "top 80%",   
+        once: true,   
+        scrub: 2,
+        end: "top 0",
+    }
+
+});
+
+
+tl2.from(".contact_main", {
+    
+    hight : 0,
+    y: -20,
+    opacity: 0,
+    duration: 0.2,   
+    scale: 0.4,
+
+})
+
+tl2.from(".contact_heading a,.contact_heading h3,.contact_heading p", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+
+
+tl2.from(".contact_card input,.contact_card button", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+  
+
+})
+
+}
+
+//footer_animation();
+
+function footer_animation() {
+
+
+var tl2 = gsap.timeline({
+
+    scrollTrigger: {
+        trigger: "#footer",
+        scroller: "Body",
+       // markers: true,
+        start: "top 80%",   
+       // once: true,   
+        scrub: 2,
+        end: "=+100",
+    }
+
+});
+
+
+tl2.from(".footer_main", {
+    
+  
+    y: 120,
+    opacity: 0,
+    duration: 0.2,   
+    //scale: 0.4,
+
+})
+
+tl2.from(".contact_headin a,.contact_headin h3,.contact_headin p", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+    scale: 0.4,
+
+})
+
+
+
+tl2.from(".footer_links div", {
+    y: -20,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+  
+
+})
+
+}
+
+
+
+
+
+
+// Condition on window width to trigger animations
+// This ensures animations are only applied on larger screens;
 
 if (window.innerWidth >= 768) {
  
@@ -206,6 +421,10 @@ service_animation();
 about_animation();
 testimonials_animation();
 specialists_animation();
+why_choose_us_animation();
+blog_animation();
+contact_animation();
+footer_animation();
 
 
 }
