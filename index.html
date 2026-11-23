@@ -7,11 +7,24 @@
   <title>KT Secure</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 
 
-<body class="bg-[#08041D]  text-white font-sans overflow-x-hidden">
+<body class="bg-[#08041D]  text-white font-sans overflow-x-hidden overflow-hidden">
+
+  <!-- Loader -->
+
+  <div id="loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#08041D]">
+    <div id="loader-content" class="flex flex-col items-center gap-6 w-64">
+      <img src="./images/logo.svg" alt="KT Secure" class="h-6 loader-pulse" />
+      <div class="w-full h-[3px] rounded-full bg-white/10 overflow-hidden">
+        <div id="loader-bar" class="h-full w-full origin-left bg-[#FF4040]" style="transform: scaleX(0)"></div>
+      </div>
+      <span id="loader-count" class="text-xs tracking-widest text-white/50">0%</span>
+    </div>
+  </div>
 
 
   <!-- Nav Bar -->
@@ -21,10 +34,10 @@
     <nav class="border-gray-200 px-4 lg:px-6 py-4">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="#" class="flex navlogo items-center">
-          <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="Flowbite Logo" />
+          <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="KT Secure logo" />
         </a>
         <div class="flex items-center lg:order-2">
-          <a href="#" class="text-white bg-[#FF4040] bt_cta rounded-full text-md px-8 py-3">Contact Us</a>
+          <a href="#contact" class="text-white bg-[#FF4040] bt_cta rounded-full text-md px-8 py-3">Contact Us</a>
           <button id="menu-toggle" type="button"
             class="inline-flex items-center  p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-2" aria-expanded="false">
@@ -52,30 +65,30 @@
             </li>
             <li>
               <a href="#services"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Services</a>
             </li>
             <li>
               <a href="#about"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About
                 Us</a>
             </li>
             <li>
               <a href="#testimonials"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Testimonials</a>
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Testimonials</a>
             </li>
             <li>
               <a href="#specialists"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Our
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Our
                 Specialists</a>
             </li>
             <li>
               <a href="#why"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Why
-                Chose Us</a>
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Why
+                Choose Us</a>
             </li>
             <li>
               <a href="#blog"
-                class=" nav-link block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Blogs</a>
+                class=" nav-link block py-2 pr-4 pl-3 text-white/70 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Blogs</a>
             </li>
           </ul>
         </div>
@@ -104,16 +117,16 @@
 
       </a>
       <h1
-        class="motion-preset-shrink   mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Specialists in Software Code Signing and
         <span class="text-[#FF4040]"> Hardware Security</span>
         Module Management
       </h1>
       <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
         You Beat your Goals. We Beat the Threats. Ensure trusted software delivery and secure key management with expert
-        precision.</p>
+        precision, backed by more than 15 years of hands-on cybersecurity experience.</p>
       <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-        <a href="#"
+        <a href="#services"
           class="inline-flex justify-center items-center py-3 px-8 text-base font-medium text-center text-white rounded-full bg-[#FF4040] dark:hover:bg-transparent  dark:hover:border border-[#FF4040] focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
           Learn more
 
@@ -239,8 +252,8 @@
             <span class="text-[#FF4040]"> security solutions</span>
           </h3>
           <p class="mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            congue, nisl eget molestie varius, enim ex faucibus purus.
+            From penetration testing to fully managed HSM operations, we protect your
+            software, keys and infrastructure at every stage.
           </p>
         </div>
 
@@ -296,7 +309,7 @@
 
         <!-- background Element -->
 
-        <div class="absolute bottom-0 -left-26 w-44 h-44 blur-[200px]" style="
+        <div class="absolute bottom-0 -left-26 w-44 h-44 blur-[200px] float-glow" style="
          background: #FF4040  ;
         ">
           <!-- background: linear-gradient(
@@ -345,7 +358,7 @@
 
             <h3
               class="font-semibold text-white  text-4xl  tracking-tight leading-none  md:text-6xl lg:text-8xl dark:text-[#FF4040]">
-              15+</h3>
+              <span class="counter" data-target="15">15</span>+</h3>
             <a href="#"
               class="inline-flex justify-between border border-white/10 items-center px-6 py-2 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
               role="alert">
@@ -383,7 +396,7 @@
         </ul>
 
 
-        <div class="absolute -right-10 bottom-0  size-44 blur-[200px]" style="
+        <div class="absolute -right-10 bottom-0  size-44 blur-[200px] float-glow" style="
          background: #FF4040  ;
         ">
           <!-- background: linear-gradient(
@@ -429,60 +442,57 @@
         <ul class="grid gap-6 test_card sm:grid-cols-2 lg:grid-cols-3">
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
                   “Fast, flexible, and truly experts in cybersecurity!”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked quickly and were flexible to our methodology.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-1.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Insurance Industry</span>
+                  <span class="block text-white/30  text-sm mt-0.5">Operations Director</span>
                 </div>
               </div>
             </figure>
           </li>
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
-                  “Fast, flexible, and truly experts in cybersecurity!”
+                  “A genuine partner, not just a supplier.”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> The team took the time to understand our code signing workflow and built an HSM setup that fits it perfectly.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-2.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Software Vendor</span>
+                  <span class="block text-white/30  text-sm mt-0.5">Head of Engineering</span>
                 </div>
               </div>
             </figure>
           </li>
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
-                  “Fast, flexible, and truly experts in cybersecurity!”
+                  “Penetration testing that actually found the gaps.”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> Clear findings, practical fixes and no jargon. Our security posture is measurably stronger.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-3.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Financial Services</span>
+                  <span class="block text-white/30  text-sm mt-0.5">CISO</span>
                 </div>
               </div>
             </figure>
@@ -493,60 +503,57 @@
 
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
-                  “Fast, flexible, and truly experts in cybersecurity!”
+                  “Our HSM fleet has never been more reliable.”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> Their managed service lets us concentrate on our core business while our keys stay protected.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-4.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Technology Sector</span>
+                  <span class="block text-white/30  text-sm mt-0.5">IT Infrastructure Manager</span>
                 </div>
               </div>
             </figure>
           </li>
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
-                  “Fast, flexible, and truly experts in cybersecurity!”
+                  “Responsive support whenever we need it.”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> Every question was answered quickly and with real expertise, even outside normal hours.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-5.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Retail Industry</span>
+                  <span class="block text-white/30  text-sm mt-0.5">Security Manager</span>
                 </div>
               </div>
             </figure>
           </li>
 
           <li class="bg-white/5  backdrop-blur-xs  space-y-3 p-8 rounded-3xl">
-            <figure>
+            <figure class="flex flex-col h-full">
               <blockquote>
                 <h3 class="text-white text-2xl font-semibold sm:text-2xl">
-                  “Fast, flexible, and truly experts in cybersecurity!”
+                  “Compliance made simple.”
                 </h3>
-                <p class="block text-white/30  mt-6 "> KT Secure really know Cyber security, they worked
-                  quickly and were flexible to our methodology.</p>
+                <p class="block text-white/30  mt-6 "> KT Secure guided us through audit requirements for key management and made the process painless.</p>
               </blockquote>
 
-              <div class="flex items-center gap-x-2 mt-6">
-                <img src="./images/avatar.png" class="w-16 h-16 rounded-full" />
+              <div class="flex items-center gap-x-2 mt-auto pt-6">
+                <img src="./images/clients/client-6.jpg" alt="" class="w-16 h-16 rounded-full object-cover" />
                 <div>
-                  <span class="block text-white font-semibold" x-text="item.name">Insurance Industry</span>
-                  <span class="block text-white/30  text-sm mt-0.5" x-text="item.title">Operations Director</span>
+                  <span class="block text-white font-semibold">Healthcare Sector</span>
+                  <span class="block text-white/30  text-sm mt-0.5">Compliance Director</span>
                 </div>
               </div>
             </figure>
@@ -594,7 +601,7 @@
 
         </div>
         <div class="flex-none specialists_heading mt-4 md:mt-0">
-          <a href="#" class="text-white bg-primary-700 rounded-full bg-[#FF4040]  text-md px-8 py-3 ">Contect Us</a>
+          <a href="#" class="text-white bg-primary-700 rounded-full bg-[#FF4040]  text-md px-8 py-3 ">Contact Us</a>
         </div>
       </div>
       <div class="mt-12">
@@ -602,23 +609,21 @@
 
           <li class="space-y-3 py-8 lg:px-12 sm:py-0 ">
             <div class=" w-fit h-fit items-center">
-              <div class="bg-[url(./images/mission.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
-              </div>
+              <div class="icon-badge"><i class="fa-solid fa-satellite-dish"></i></div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Real-Time Threat Detection</h4>
-                <p class=" text-white/70">Round-the-clock monitoring to identify risks as they happen. Immediate alerts
+            <h4 class="text-lg text-white font-semibold">Real-Time Threat Detection</h4>
+                <p class="text-white/70">Round-the-clock monitoring to identify risks as they happen. Immediate alerts
               and actions to keep your systems secure.
               </p>
           </li>
 
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+          <li class="space-y-3 py-8 lg:px-12 sm:py-0">
             <div class=" w-fit h-fit items-center">
-              <div class="bg-[url(./images/mission.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
-              </div>
+              <div class="icon-badge"><i class="fa-solid fa-shield-halved"></i></div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Comprehensive Security Coverage</h4>
-                <p class=" text-white/70">Full-spectrum protection from development to deployment. Safeguard your
+            <h4 class="text-lg text-white font-semibold">Comprehensive Security Coverage</h4>
+                <p class="text-white/70">Full-spectrum protection from development to deployment. Safeguard your
               entire digital ecosystem without gaps.
               </p>
           </li>
@@ -627,26 +632,24 @@
 
 
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+          <li class="space-y-3 py-8 lg:px-12 sm:py-0">
             <div class=" w-fit h-fit items-center">
-              <div class="bg-[url(./images/mission.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
-              </div>
+              <div class="icon-badge"><i class="fa-solid fa-microchip"></i></div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Advanced Security Technology</h4>
-                <p class=" text-white/70">Utilizing the latest tools and innovations to fight cyber threats.
+            <h4 class="text-lg text-white font-semibold">Advanced Security Technology</h4>
+                <p class="text-white/70">Utilizing the latest tools and innovations to fight cyber threats.
               Future-ready solutions tailored for your business needs.
               </p>
           </li>
 
 
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+          <li class="space-y-3 py-8 lg:px-12 sm:py-0">
             <div class=" w-fit h-fit items-center">
-              <div class="bg-[url(./images/mission.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
-              </div>
+              <div class="icon-badge"><i class="fa-solid fa-user-shield"></i></div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Trusted Industry Professionals</h4>
-                <p class=" text-white/70">Security specialists with proven expertise and credentials. Count on us for
+            <h4 class="text-lg text-white font-semibold">Trusted Industry Professionals</h4>
+                <p class="text-white/70">Security specialists with proven expertise and credentials. Count on us for
               reliable, expert-driven protection.
               </p>
           </li>
@@ -663,7 +666,7 @@
 
 
   <section id="why" class="py-14 max-w-screen-xl mx-auto">
-    <div class=" py-14 px-4 why_main md:px-8 md:mx-8 overflow-hidden bg-white/5  backdrop-blur-xs rounded-3xl">
+    <div class=" relative py-16 px-4 why_main mx-4 md:px-8 md:mx-8 overflow-hidden bg-white/5  backdrop-blur-xs rounded-3xl">
       <div class="relative max-w-2xl mx-auto sm:text-center">
         <div class="relative why_heading z-10">
           <a href="#"
@@ -685,36 +688,36 @@
 
 
       </div>
-      <div class="mt-12">
-        <ul class="grid gap-6 why_card sm:grid-cols-2 lg:grid-cols-3">
+      <div class="relative mt-12 pb-4">
+        <ul class="grid gap-10 why_card sm:grid-cols-2 lg:grid-cols-3 text-center">
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0 ">
+          <li class="space-y-3 py-6 px-4 lg:px-8 rounded-3xl flex flex-col items-center">
             <div class=" w-fit h-fit items-center">
               <div class="bg-[url(./images/why-chose-1.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
               </div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Proven Expertise</h4>
-                <p class=" text-white/70">Backed by years of hands-on cybersecurity experience.
+            <h4 class="text-lg text-white font-semibold">Proven Expertise</h4>
+                <p class="text-white/70">Backed by years of hands-on cybersecurity experience.
               </p>
           </li>
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0 ">
+          <li class="space-y-3 py-6 px-4 lg:px-8 rounded-3xl flex flex-col items-center">
             <div class=" w-fit h-fit items-center">
               <div class="bg-[url(./images/why-chose-2.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
               </div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Tailored Solutions</h4>
-                <p class=" text-white/70">Services customized to meet your specific needs.
+            <h4 class="text-lg text-white font-semibold">Tailored Solutions</h4>
+                <p class="text-white/70">Services customized to meet your specific needs.
               </p>
           </li>
 
-          <li class="space-y-3 py-8 lg:px-12 sm:py-0 ">
+          <li class="space-y-3 py-6 px-4 lg:px-8 rounded-3xl flex flex-col items-center">
             <div class=" w-fit h-fit items-center">
               <div class="bg-[url(./images/why-chose-3.svg)] items-center size-16 bg-no-repeat bg-center bg-contain ">
               </div>
             </div>
-            <h4 class="text-lg text-white font-semibold" ">Reliable Support</h4>
-                <p class=" text-white/70">Always available to protect and assist you 24/7.
+            <h4 class="text-lg text-white font-semibold">Reliable Support</h4>
+                <p class="text-white/70">Always available to protect and assist you 24/7.
               </p>
           </li>
 
@@ -725,7 +728,7 @@
 
         </ul>
 
-        <div class="absolute    left-26 size-44 blur-[200px]" style="
+        <div class="absolute -left-10 bottom-0 size-44 blur-[200px] pointer-events-none" style="
          background: #FF4040  ;
         ">
           <!-- background: linear-gradient(
@@ -756,12 +759,12 @@
 
           </a>
           <h3 class=" text-white text-3xl font-semibold sm:text-4xl">
-            Expert solutions tailored to your<span class="text-[#FF4040]"> cybersecurity needs</span>
+            Insights from the front line of<span class="text-[#FF4040]"> cybersecurity</span>
           </h3>
 
         </div>
         <div class="flex-none mt-4 blog_heading md:mt-0">
-          <a href="#" class="text-white bg-primary-700 rounded-full bg-[#FF4040]  text-md px-8 py-3 ">Contect Us</a>
+          <a href="#" class="text-white bg-primary-700 rounded-full bg-[#FF4040]  text-md px-8 py-3 ">Read All Articles</a>
         </div>
       </div>
       <div class="mt-12">
@@ -770,11 +773,11 @@
           <!-- Card 1 -->
           <li
             class="bg-[#15122A] space-y-4 p-3 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <img src="./images/blog-1.png" alt="Penetration Testing Image" class="w-full h-40% object-cover">
+            <img src="./images/blog-1.jpg" alt="Penetration testing" class="w-full aspect-[16/10] object-cover rounded-2xl" loading="lazy">
             <div class="p-2">
               <ul class="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                <li class="flex items-center gap-1">📅 May 22, 2025</li>
-                <li class="flex items-center gap-1">👤 By admin</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> May 22, 2025</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By admin</li>
               </ul>
               <h3 class="text-white text-lg font-semibold mb-2">What Is Penetration Testing?</h3>
               <p class="text-gray-400 text-sm">
@@ -786,7 +789,7 @@
                   class="inline-flex justify-between border border-white/10 items-center px-3 py-1 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
                   role="alert">
 
-                  <span class="text-sm font-regular">Cyber Security</span>
+                  <span class="text-sm font-regular">Offensive Security</span>
 
                 </a>
               </div>
@@ -796,15 +799,15 @@
           <!-- Card 2 -->
           <li
             class="bg-[#15122A] space-y-4 p-3 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <img src="./images/blog-2.png" alt="Penetration Testing Image" class="w-full h-40% object-cover">
+            <img src="./images/blog-2.jpg" alt="Code signing" class="w-full aspect-[16/10] object-cover rounded-2xl" loading="lazy">
             <div class="p-2">
               <ul class="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                <li class="flex items-center gap-1">📅 May 22, 2025</li>
-                <li class="flex items-center gap-1">👤 By admin</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> June 12, 2025</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By admin</li>
               </ul>
-              <h3 class="text-white text-lg font-semibold mb-2">What Is Penetration Testing?</h3>
+              <h3 class="text-white text-lg font-semibold mb-2">Why Code Signing Matters for Your Software</h3>
               <p class="text-gray-400 text-sm">
-                Knight Trading UK Limited provides Cyber Security Managed Services...
+                Code signing proves who built your software and that it has not been tampered with...
                 <a href="#" class="text-red-500 hover:underline">Read more</a>
               </p>
               <div class="mt-4">
@@ -812,7 +815,7 @@
                   class="inline-flex justify-between border border-white/10 items-center px-3 py-1 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
                   role="alert">
 
-                  <span class="text-sm font-regular">Cyber Security</span>
+                  <span class="text-sm font-regular">Code Signing</span>
 
                 </a>
               </div>
@@ -823,15 +826,15 @@
           <!-- Card 3 -->
           <li
             class="bg-[#15122A] space-y-4 p-3 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <img src="./images/blog-3.png" alt="Penetration Testing Image" class="w-full h-40% object-cover">
+            <img src="./images/blog-3.jpg" alt="Hardware security modules" class="w-full aspect-[16/10] object-cover rounded-2xl" loading="lazy">
             <div class="p-2">
               <ul class="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                <li class="flex items-center gap-1">📅 May 22, 2025</li>
-                <li class="flex items-center gap-1">👤 By admin</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> July 3, 2025</li>
+                <li class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By admin</li>
               </ul>
-              <h3 class="text-white text-lg font-semibold mb-2">What Is Penetration Testing?</h3>
+              <h3 class="text-white text-lg font-semibold mb-2">Getting Started with Hardware Security Modules</h3>
               <p class="text-gray-400 text-sm">
-                Knight Trading UK Limited provides Cyber Security Managed Services...
+                Deploying your first HSM? Here is what to plan for across the whole life-cycle...
                 <a href="#" class="text-red-500 hover:underline">Read more</a>
               </p>
               <div class="mt-4">
@@ -839,7 +842,7 @@
                   class="inline-flex justify-between border border-white/10 items-center px-3 py-1 mb-4 text-sm text-white bg-gray-100 rounded-full bg-white/5  backdrop-blur-xs "
                   role="alert">
 
-                  <span class="text-sm font-regular">Cyber Security</span>
+                  <span class="text-sm font-regular">HSM Management</span>
 
                 </a>
               </div>
@@ -872,7 +875,7 @@
               <div class="bg-[url(./images/service-2.svg)] items-center  w-8 h-8 bg-no-repeat bg-center bg-contain ">
               </div>
             </div>
-            <span class="text-sm font-regular">Contact US</span>
+            <span class="text-sm font-regular">Contact Us</span>
 
           </a>
           <h3 class="text-3xl text-white font-bold">
@@ -926,7 +929,7 @@
         <!-- Logo + Description -->
         <div>
           <a href="#" class="flex items-center">
-            <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="Flowbite Logo" />
+            <img src="./images/logo.svg" class="mr-3 h-4 sm:h-4" alt="KT Secure logo" />
           </a>
           <p class="text-sm text-gray-400 mt-4">
             Protecting digital assets with trusted cybersecurity and encryption solutions. Secure.
@@ -936,6 +939,7 @@
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f text-white hover:text-red-500"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-white hover:text-red-500"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-white hover:text-red-500"></i></a>
+            <a href="#" aria-label="X"><i class="fab fa-x-twitter text-white hover:text-red-500"></i></a>
           </div>
         </div>
 
@@ -943,11 +947,11 @@
         <div>
           <h3 class="text-white font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-red-500">❯ Home</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ Product</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ Services</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ About Us</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ Contact Us</a></li>
+            <li><a href="#home" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+            <li><a href="#services" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+            <li><a href="#about" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+            <li><a href="#testimonials" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Testimonials</a></li>
+            <li><a href="#contact" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Contact Us</a></li>
           </ul>
         </div>
 
@@ -955,9 +959,9 @@
         <div>
           <h3 class="text-white font-semibold mb-4">Our Services</h3>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-red-500">❯ Offensive Security</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ Managed Cyber Security</a></li>
-            <li><a href="#" class="hover:text-red-500">❯ Hardware Security Management</a></li>
+            <li><a href="#" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Offensive Security</a></li>
+            <li><a href="#" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Managed Cyber Security</a></li>
+            <li><a href="#" class="hover:text-red-500"><i class="fa-solid fa-angle-right text-xs"></i> Hardware Security Management</a></li>
           </ul>
         </div>
 
@@ -966,13 +970,13 @@
           <h3 class="text-white font-semibold mb-4">Contact Info</h3>
           <ul class="space-y-3 text-sm text-gray-400">
             <li class="flex items-start gap-2">
-              <span>📍</span> 16 Berkeley Street, London, W1J 8DZ, UK
+              <i class="fa-solid fa-location-dot text-[#FF4040] mt-1"></i> 16 Berkeley Street, London, W1J 8DZ, UK
             </li>
             <li class="flex items-center gap-2">
-              <span>📞</span> +44 (0) 207 889 0888
+              <i class="fa-solid fa-phone text-[#FF4040]"></i> +44 (0) 207 889 0888
             </li>
             <li class="flex items-center gap-2">
-              <span>⏰</span> Mon - Fri, 08:00 - 18:00
+              <i class="fa-regular fa-clock text-[#FF4040]"></i> Mon - Fri, 08:00 - 18:00
             </li>
           </ul>
         </div>
@@ -981,7 +985,7 @@
 
       <!-- Divider -->
       <div class="border-t border-gray-700 mt-10 pt-4 flex flex-col sm:flex-row justify-between text-xs text-gray-500">
-        <p>© 2025 KT Secure. All Rights Reserved.</p>
+        <p>© 2026 KT Secure. All Rights Reserved.</p>
         <div class="space-x-4 mt-2 sm:mt-0">
           <a href="#" class="hover:text-red-500">Privacy Policy</a>
           <a href="#" class="hover:text-red-500">Terms & Condition</a>
@@ -1011,6 +1015,54 @@
       scroll-behavior: smooth;
     }
 
+    .service_card > li,
+    .test_card > li,
+    .blog_card > li {
+      transition: box-shadow .3s ease;
+    }
+
+    .service_card > li:hover,
+    .test_card > li:hover,
+    .blog_card > li:hover {
+      box-shadow: inset 0 0 0 1px #FF4040;
+    }
+
+    .specialists_card > li:hover .icon-badge {
+      background: rgba(255, 64, 64, .12);
+    }
+
+    .icon-badge {
+      display: grid;
+      place-items: center;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 9999px;
+      font-size: 1.75rem;
+      color: #FF4040;
+      background: rgba(255, 255, 255, .05);
+      backdrop-filter: blur(4px);
+      transition: background-color .3s ease;
+    }
+
+
+    .loader-pulse {
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .45; }
+    }
+
+    .float-glow {
+      animation: floaty 7s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
     .active-link {
       color: white;
       /* Matches your theme's red color */
@@ -1018,17 +1070,17 @@
     }
 
     @keyframes marquee {
-      100% {
-        transform: translateX(100%);
+      from {
+        transform: translateX(0);
       }
 
-      100% {
-        transform: translateX(-100%);
+      to {
+        transform: translateX(-50%);
       }
     }
 
     .animate-marquee {
-      animation: marquee 100s linear infinite;
+      animation: marquee 40s linear infinite;
     }
   </style>
 
